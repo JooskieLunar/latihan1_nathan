@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Film - Web Film</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <a href="index.html">Home</a> |
+        <a href="list_film.html">List Film</a> |
+        <a href="add_film.html">Add Film</a>
+    </nav>
+
+    <h1>Tambah Film Baru</h1>
+
+    <form action="proses_add.php" method="post" enctype="multipart/form-data">
+        <label for="judul">Judul Film:</label><br>
+        <input type="text" id="judul" name="judul" required><br><br>
+
+        <label for="genre">Genre:</label><br>
+        <select id="genre" name="genre" required>
+            <option value="">--Pilih Genre--</option>
+            <option value="Action">Action</option>
+            <option value="Drama">Drama</option>
+            <option value="Comedy">Comedy</option>
+            <option value="Horror">Horror</option>
+            <option value="Romance">Romance</option>
+        </select><br><br>
+
+        <label for="tahun">Tahun Produksi:</label><br>
+        <input type="number" id="tahun" name="tahun" min="1900" max="2100" required><br><br>
+
+        <label for="sinopsis">Sinopsis:</label><br>
+        <textarea id="sinopsis" name="sinopsis" rows="4" cols="40"></textarea><br><br>
+
+        <label for="durasi">Durasi (menit):</label><br>
+        <input type="number" id="durasi" name="durasi" required><br><br>
+
+        <label for="aktor1">Aktor Utama 1:</label><br>
+        <input type="text" id="aktor1" name="aktor1" required><br><br>
+
+        <label for="aktor2">Aktor Utama 2:</label><br>
+        <input type="text" id="aktor2" name="aktor2" required><br><br>
+
+        <label for="aktor3">Aktor Utama 3:</label><br>
+        <input type="text" id="aktor3" name="aktor3" required><br><br>
+
+        <label for="poster">Poster Film:</label><br>
+        <input type="file" id="poster" name="poster" accept="image/*" required><br><br>
+
+        <input type="submit" value="Tambah Film">
+    </form>
+</body>
+</html>
